@@ -1,0 +1,46 @@
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% DO NOT MODIFY THIS FILE (UNLESS NECESSARY)!
+% Declare a separate file for project-specific macros.
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mathsettings}[2021/09/06 Math settings package]
+
+\RequirePackage{amssymb}
+\RequirePackage{mathtools} % ESSENTIAL!
+\RequirePackage{array}     % For extended column definitions 
+\RequirePackage{multirow}  % For merging rows
+\RequirePackage{xcolor}
+\RequirePackage{cases}     % Provides numcases and subnumcases environments
+\RequirePackage{soul}	     % Provides \ul{} command for breaking underline
+\RequirePackage{accents}
+\RequirePackage{emptypage}
+\RequirePackage{graphicx}
+\RequirePackage{commath}   % Kept for backwards compatibility; USE physics INSTEAD!
+\RequirePackage{siunitx}
+\RequirePackage{scalerel}  % Eg.: $V_{\scaleto{CC}{4pt}}$
+\RequirePackage{cancel}    % USE centernot INSTEAD!
+\RequirePackage{centernot} % To cancel out expressions (better than cancel package)
+\RequirePackage{enumitem}
+\RequirePackage{physics}   % ESSENTIAL!
+%\RequirePackage{imakeidx}      % Use \makeindex to create index, and \printindex at the end of document
+\usepackage[none]{hyphenat}
+\RequirePackage[colorlinks=true,
+linkcolor=blue,
+urlcolor=blue,
+citecolor=blue,
+linktoc=page,
+unicode=true]{hyperref}
+
+\newcolumntype{C}{>{$}c<{$}} % Math mode in table column, centre-aligned
+\newcolumntype{L}{>{$}l<{$}} % Math mode in table column, left-aligned
+\newcolumntype{R}{>{$}r<{$}} % Math mode in table column, right-aligned
+
+\newcommand{\dint}{\int\limits}
+\newcommand{\dsum}{\sum\limits}
+\newcommand{\dprod}{\prod\limits}
+\newcommand{\tendsto}{\ensuremath{\rightarrow}}
+\newcommand{\e}[1]{\ensuremath{\mathrm{e}^{#1}}}
+
+\renewcommand{\d}{\mathrm{d}}  % Better to use \dd{} from physics package!
+\DeclareRobustCommand{\underdot}[1]{$\underaccent{\dot}{#1}$} % We have used up \d, which was originally used for dots under letters.
