@@ -1,14 +1,9 @@
-%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-% DO NOT MODIFY THIS FILE (UNLESS NECESSARY)!
-% Declare a separate file for project-specific macros.
-%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{mathsettings}[2021/09/06 Math settings package]
+\ProvidesPackage{mathsettings}[2023/02/02 Math settings package]
 
 \RequirePackage{amssymb}
-\RequirePackage{mathtools} % ESSENTIAL!
-\RequirePackage{physics}   % ESSENTIAL!
+\RequirePackage{mathtools}
+\RequirePackage{physics}
 \RequirePackage{array}     % For extended column definitions 
 \RequirePackage{multirow}  % For merging rows
 \RequirePackage{xcolor}
@@ -21,8 +16,10 @@
 \RequirePackage{scalerel}  % Eg.: $V_{\scaleto{CC}{4pt}}$
 \RequirePackage{centernot} % To cancel out expressions (better than cancel package)
 \RequirePackage{enumitem}
-%\RequirePackage{imakeidx}      % Use \makeindex to create index, and \printindex at the end of document
-\RequirePackage[none]{hyphenat}
+\RequirePackage{tabularx}
+\RequirePackage{makecell}
+% \RequirePackage[none]{hyphenat}  % PLEASE DEFINE THIS IN YOUR PROJECT MAIN FILE. Not all projects will want this; hence it has been disabled.
+
 \RequirePackage[colorlinks=true,
 linkcolor=blue,
 urlcolor=blue,
